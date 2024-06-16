@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.message-container {
+    text-align: center;
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+}
+
+.message {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff6347;
+    text-shadow: 2px 2px #ffdab9;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.pop-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pop-img {
+    width: 100px;
+    height: auto;
+    position: relative;
+    opacity: 0;
+    animation: popIn 1s ease-in-out forwards infinite;
+}
+
+.teddy {
+    animation-delay: 0s;
+}
+
+.chocolate {
+    animation-delay: 1s;
+}
+
+.shinchan {
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
